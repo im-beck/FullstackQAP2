@@ -31,14 +31,15 @@ const server = http.createServer((req, res) => {
             res.writeHead(404, { 'Content-Type': 'text/html' });
             res.write('<h1>404 Not Found</h1>');
             res.end();
+            // Emit event for unsuccessful response
+            myEmitter.emit('httpStatusCode', 404);
         } else {
             // If file found, respond with the content of the HTML file
             res.writeHead(200, { 'Content-Type': 'text/html' });
             res.write(data);
             res.end();
-
-            // Emit event for successful file read
-            myEmitter.emit('fileRead', filePath);
+            // Emit event for successful response
+            myEmitter.emit('httpStatusCode', 200);
         }
     });
 });
@@ -62,4 +63,9 @@ myEmitter.on('nonHomeRouteAccess', (route) => {
 // Emitting event for successful file read
 myEmitter.on('fileRead', (filePath) => {
     console.log(`File read successfully: ${filePath}`);
+});
+
+// Emitting event for HTTP status codes
+myEmitter.on('httpStatusCode', (statusCode) => {
+    console.log(`HTTP Status Code: ${statusCode}`);
 });
