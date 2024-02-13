@@ -4,16 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+    <style>
+        /* Custom CSS for styling the navigation menu */
+        nav {
+            background-color: #f0f0f0; /* Background color of the navigation menu */
+            padding: 10px; /* Padding around the navigation menu */
+            border-radius: 5px; /* Rounded corners for the navigation menu */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Box shadow for the navigation menu */
+        }
+
+        nav ul {
+            list-style-type: none; /* Remove default list styles */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Display list items horizontally */
+        }
+
+        nav li {
+            margin-right: 10px; /* Spacing between list items */
+        }
+
+        nav a {
+            text-decoration: none; /* Remove default underline */
+            color: #333; /* Text color of the links */
+            padding: 5px 10px; /* Padding around the links */
+            border-radius: 3px; /* Rounded corners for the links */
+            transition: background-color 0.3s ease; /* Smooth transition for background color change */
+        }
+
+        nav a:hover {
+            background-color: #ddd; /* Background color on hover */
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation menu -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/products">Our Products</a></li>
+            <li><a href="/subscribe">Subscribe</a></li>
+        </ul>
+    </nav>
+
     <h1>Welcome to the homepage!</h1>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Us</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-        <li><a href="/products">Our Products</a></li>
-        <li><a href="/subscribe">Subscribe</a></li>
-    </ul>
+
+    <!-- Main content -->
+    <!-- Your content here -->
 </body>
 </html>
+
+
 
